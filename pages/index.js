@@ -35,6 +35,7 @@ export const getServerSideProps = async (ctx) => {
 
   const res = await axios.get("http://localhost:3000/api/products");
   return {
+    fallback: "blocking",
     props: {
       productList: res.data,
       admin,
