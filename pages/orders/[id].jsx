@@ -129,6 +129,7 @@ export const getServerSideProps = async ({ params }) => {
     `https://shop-app-liart.vercel.app/api/orders/${params.id}`
   );
   return {
+    fallback: true,
     props: { order: res.data },
   };
 };

@@ -138,6 +138,7 @@ export const getServerSideProps = async (ctx) => {
   const orderRes = await axios.get("https://shop-app-liart.vercel.app/orders");
 
   return {
+    fallback: "blocking",
     props: {
       orders: orderRes.data,
       products: productRes.data,
