@@ -33,7 +33,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get("http://localhost:3000/api/products");
+  const res = await axios.get("https://shop-app-liart.vercel.app/api/products");
   return {
     fallback: "blocking",
     props: {
