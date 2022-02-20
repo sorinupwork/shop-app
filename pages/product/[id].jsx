@@ -109,7 +109,7 @@ export const getServerSideProps = async ({ params }) => {
     `https://shop-app-liart.vercel.app/api/products/${params.id}`
   );
   return {
-    fallback: true,
+    fallback: "blocking",
     props: {
       product: res.data,
     },

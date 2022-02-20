@@ -7,6 +7,8 @@ import ProductList from "../components/ProductList";
 import Slider from "../components/Slider";
 import styles from "../styles/Home.module.css";
 
+axios.defaults.baseURL = "https://shop-app-liart.vercel.app/";
+
 export default function Home({ productList, admin }) {
   const [close, setClose] = useState(true);
 
